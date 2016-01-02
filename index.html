@@ -6,7 +6,19 @@
 	<dom-module id="native-title-bar">
 		<link rel="import" type="css" href="style.css">
 		<template>
-			<content></content>
+			<div class="Title">
+				<button>I</button><div>{{title}}</div>
+			</div>
+			<forge-toolbar type="title">
+				<forge-reloader id="RELOAD">R</forge-reloader>
+				<forge-repainter id="REPAINT">S</forge-repainter>
+				<native-developer-tools>D</native-developer-tools>
+			</forge-toolbar>
+			<div class="Controls">
+				<button>-</button>
+				<button>R</button>
+				<button>X</button>
+			</div>
 		</template>
 	</dom-module>
 	<script src="register.js"></script>

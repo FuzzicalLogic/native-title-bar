@@ -9,6 +9,18 @@
 		detached: onElementDetached,
 
 		properties: {
+			title: {
+				type: String,
+				value: require('electron').remote.getCurrentWindow().getTitle(),
+				notify: true,
+				reflectToAttribute: true
+			},
+			debuggable: {
+				type: Boolean,
+				value: false,
+				notify: true,
+				reflectToAttribute: true
+			}
 		},
 
 	});

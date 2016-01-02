@@ -1,3 +1,8 @@
 :host {
 	display: flex; flex-flow: row nowrap;
 }
+
+	:host > .Title {
+		flex: 1 1;
+    	display: flex; flex-flow: row nowrap; align-items: flex-start;
+	}
