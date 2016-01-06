@@ -1,19 +1,17 @@
 <!-- Component Dependencies -->
 	<link rel="import" href="../polymer/polymer.html">
-	<link rel="import" href="../liquid-hotkey-event/index.html">
+	<link rel="import" href="../forge-titlebar-insert/index.html">
 
 <!-- Component Definition and Template -->
 	<dom-module id="native-title-bar">
 		<link rel="import" type="css" href="style.css">
 		<template>
-			<div class="Title">
-				<button>I</button><div>{{title}}</div>
+			<div titlebar-menu>
+				<button titlebar-icon>I</button><span titlebar-title>{{title}}</span>
 			</div>
-			<forge-toolbar type="title">
-				<forge-reloader id="RELOAD">R</forge-reloader>
-				<forge-repainter id="REPAINT">S</forge-repainter>
-				<native-developer-tools>D</native-developer-tools>
-			</forge-toolbar>
+			<template is="dom-if" if="{{debuggable}}">
+				<forge-titlebar-insert></forge-titlebar-insert>
+			</template>
 			<div class="Controls">
 				<button>-</button>
 				<button>R</button>
