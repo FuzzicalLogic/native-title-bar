@@ -1,8 +1,32 @@
-:host {
+:host[platform="win32"][design="window"] {
+	padding: 1px; height: 32px;
 	display: flex; flex-flow: row nowrap;
+	font-size: 14px;
+	-webkit-app-region: drag;
 }
 
-	:host > .Title {
+	:host[platform="win32"][design="window"]  > [titlebar-menu] {
 		flex: 1 1;
     	display: flex; flex-flow: row nowrap; align-items: flex-start;
+	}
+
+		:host[platform="win32"][design="window"]  > [titlebar-menu] > [titlebar-icon] {
+			-webkit-app-region: no-drag;
+		}
+
+		:host[platform="win32"][design="window"]  > [titlebar-menu] > [titlebar-title] {
+			align-self: center; margin-left: 4px;
+			flex: 1 1; padding-left: 2px; overflow: hidden;
+			text-overflow: ellipsis; white-space: nowrap;
+		}
+
+	:host[platform="win32"][design="window"]  > .Controls {
+		margin-left: 8px;
+		display: flex;
+		-webkit-app-region: no-drag;
+	}
+
+	:host[platform="win32"][design="window"][debuggable]  > forge-titlebar-insert {
+		min-width: 96px;
+		-webkit-app-region: no-drag;
 	}
