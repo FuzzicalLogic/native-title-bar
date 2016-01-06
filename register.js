@@ -9,6 +9,16 @@
 		detached: onElementDetached,
 
 		properties: {
+			platform: {
+				type: String,
+				value: '',
+				reflectToAttribute: true,
+			},
+			design: {
+				type: String,
+				value: '',
+				reflectToAttribute: true,
+			},
 			title: {
 				type: String,
 				value: require('electron').remote.getCurrentWindow().getTitle(),
@@ -20,7 +30,7 @@
 				value: false,
 				notify: true,
 				reflectToAttribute: true
-			}
+			},
 		},
 
 	});
