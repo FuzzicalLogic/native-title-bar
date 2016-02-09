@@ -20,10 +20,25 @@
 			text-overflow: ellipsis; white-space: nowrap;
 		}
 
+
 	:host[platform="win32"][design="window"]  > .Controls {
 		margin-left: 8px;
-		display: flex;
+		display: flex; min-width: 136px; max-width: 136px;
 		-webkit-app-region: no-drag;
+	}
+		:host[platform="win32"][design="window"]  > .Controls > * {
+			flex: 1 0;
+			font-size: 1.25em;
+
+		}
+
+	:host[platform="win32"][design="window"] button {
+		color: #FFFFFF;
+		background-color: transparent; border: 0px solid transparent;
+	}
+	:host[platform="win32"][design="window"] button:hover,
+	:host[platform="win32"][design="window"] button:focus {
+		background-color: rgba(128, 128, 128, 0.25); color: #fff;
 	}
 
 	:host[platform="win32"][design="window"][debuggable]  > forge-titlebar-insert {
